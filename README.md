@@ -7,13 +7,13 @@ The proposed HPC-XGB methodology learns to classify priority for COVID-19 vaccin
 
 
 # Usage
+*select_pc.py*--> convert input/output data into the A, B task.
+
 *XGB_Vacc_Prior_ModelA_main.py* -->The first layer A focuses on the classification between the high vulnerable patients and the other categories. 
 
 *XGB_Vacc_Prior_ModelB_binary.py*  --> The second layer  focuses on discriminating the priority classes in a specific age range categories (binary task).
 
 *XGB_Vacc_Prior_ModelB_multiclass.py*  --> The second layer  focuses on discriminating the priority classes in a specific age range categories (multiclass task).
-
-*select_pc.py*--> convert input/output data into the A, B task.
 
 Notice how the validation procedure is not reported in the script, i.e. each split of the outer loop was trained with the optimal hyperparameters tuned in the inner loop (found in the previous experiments).
 
@@ -38,3 +38,5 @@ doi = {https://doi.org/10.1016/j.patcog.2021.108197},
 url = {https://www.sciencedirect.com/science/article/pii/S0031320321003794},
 author = {Luca Romeo and Emanuele Frontoni},
 }
+
+Do not hesitate to contact the author for further informartion l.romeo@univpm.it
