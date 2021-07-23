@@ -21,6 +21,11 @@ Notice how the validation procedure is not reported in the script, i.e. each spl
 The Hierarchical Priority Classification eXtreme Gradient Boosting aims to provide priority classification for COVID-19 vaccine administration using the Italian Federation of General Practitioners dataset (FIMMG_COVID) that contains Electronic Health Record data of 17k patients. We measured the effectiveness of the proposed methodology for classifying all the priority classes while demonstrating a significant improvement with respect to the state of the art. The proposed ML approach, which is integrated into a clinical decision support system, is currently supporting General Pracitioners in assigning COVID-19 vaccine administration priorities to their assistants. https://mailchi.mp/netmedicaitalia/prisma-7577657
 The FIMMG_COVID is available upon request at https://vrai.dii.univpm.it/content/fimmgcovid-dataset
 
+# Requirements
+scikit-learn 0.23.2
+xgboost 0.90
+
+
 # Acknowledgement
 The present study has been supported by a research agreement among the Italian Federation of General Practitioner, Netmedica Italia and the Department of Information Engineering, Università Politecnica delle Marche, Ancona, Italy and by the "Microsoft Grant Award: AI for Health COVID-19". Authors would like to give a special thanks to Dr. Paolo Misericordia, Dr. Nicola Calabrese, Dr. Rino Moraglia, Ing. Alessandro Dalle Vedove and all 11 GPs (Core Data Team).
 
