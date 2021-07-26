@@ -23,6 +23,7 @@ The FIMMG_COVID is available upon request at https://vrai.dii.univpm.it/content/
 
 # Requirements
 scikit-learn 0.23.2
+
 xgboost 0.90
 
 
