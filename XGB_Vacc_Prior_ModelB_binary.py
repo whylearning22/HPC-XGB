@@ -119,8 +119,21 @@ for train_index, test_index in logo.split(X, y, groups):
     imbalance_ratio=countWorsening/countImprovement
 
     
-    model = DecisionTreeClassifier(random_state=1)
+    model=xgb.XGBClassifier(objective='binary:logistic', colsample_bytree=1, learning_rate=0.1,
+                          max_depth=5, alpha=0, n_estimators=10, random_state=1, nthread=-1, scale_pos_weight=imbalance_ratio)
+   # model = xgb.XGBRegressor(random_state=1, nthread=-1, objective='reg:squarederror')
 
+    #model = xgb.XGBRegressor(objective='reg:squarederror', colsample_bytree=1, learning_rate=0.1,
+     #                     max_depth=20, alpha=0, n_estimators=1000, random_state=1, nthread=-1)
+    
+    #model = DecisionTreeClassifier(random_state=1)
+
+    #parameters = {'n_estimators': [100],
+    #              'learning_rate': [0.1],
+    #              'colsample_bytree': [0.3],
+    #              'max_depth': [25]}
+    parameters = {'learning_rate': [0.001, 0.01, 0.1], 'n_estimators': [5, 15, 25, 50, 75, 100, 125],
+                  'max_depth': [5, 10, 15, 20, 25, 50, 75], 'colsample_bytree': [0.1, 0.2, 0.5, 0.9, 1]}
 
     # scoring = 'r2'
     t = time.time()
